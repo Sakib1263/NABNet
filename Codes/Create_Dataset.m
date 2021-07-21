@@ -1,5 +1,6 @@
 %% Split UCI Train-Test Data
 clear;
+% Download the raw dataset from this link: https://archive.ics.uci.edu/ml/datasets/Cuff-Less+Blood+Pressure+Estimation
 load('UCI Dataset/Part_1.mat');
 load('UCI Dataset/Part_2.mat');
 load('UCI Dataset/Part_3.mat');
@@ -12,10 +13,10 @@ warning('off');
 input_signal_length = 1100;
 output_signal_length = 1024;
 % Make or Set Destination Directory
-train_path_mat = sprintf('UCI_Train_Dataset_v2.mat');
-train_path_hdf5 = sprintf('UCI_Train_Dataset_v2.h5');
-test_path_mat = sprintf('UCI_Test_Dataset_v2.mat');
-test_path_hdf5 = sprintf('UCI_Test_Dataset_v2.h5');
+train_path_mat = sprintf('UCI_Train_Dataset.mat');
+train_path_hdf5 = sprintf('UCI_Train_Dataset.h5');
+test_path_mat = sprintf('UCI_Test_Dataset.mat');
+test_path_hdf5 = sprintf('UCI_Test_Dataset.h5');
 %
 for c = 1:2
     if c == 1
