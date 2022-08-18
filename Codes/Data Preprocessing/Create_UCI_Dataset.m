@@ -5,8 +5,8 @@ load('UCI Dataset/Part_1.mat');
 load('UCI Dataset/Part_2.mat');
 load('UCI Dataset/Part_3.mat');
 load('UCI Dataset/Part_4.mat');
-UCI_Train_Dataset = horzcat(Part_2, Part_3, Part_4);
-UCI_Test_Dataset = Part_1;
+UCI_Train_Dataset = horzcat(Part_1, Part_2, Part_3);
+UCI_Test_Dataset = Part_4;
 %% Prepare UCI Train and Test Datasets
 warning('off');
 % Input Signal Length should be at least 60 samples more than the Output, or more
@@ -14,13 +14,13 @@ input_signal_length = 1120;
 output_signal_length = 1024;
 sampling_frequency = 125;
 % Make or Set Destination Directory
-fold_num = 4;
+fold_num = 1;
 train_path_mat = sprintf('UCI_Train_Dataset_fold_%d.mat',fold_num);
 train_path_hdf5 = sprintf('UCI_Train_Dataset_fold_%d.h5',fold_num);
 test_path_mat = sprintf('UCI_Test_Dataset_fold_%d.mat',fold_num);
 test_path_hdf5 = sprintf('UCI_Test_Dataset_fold_%d.h5',fold_num);
 %
-for c = 2:2
+for c = 1:2
     if c == 1
         dataset_size = size(UCI_Train_Dataset);
         dataset_size = dataset_size(2);
