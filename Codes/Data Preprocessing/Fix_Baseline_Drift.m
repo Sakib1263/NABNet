@@ -32,6 +32,7 @@ function [y] = Fix_Baseline_Drift(x)
         [p,s,mu] = polyfit((1:numel(x)),x,20);
         f_y = polyval(p,(1:numel(x)),s,mu);
         y = x - f_y;
+        y = y - min(y);
     end
 
      % Fix the slight amplitude change due to baseline correction

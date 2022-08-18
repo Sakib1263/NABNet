@@ -1,6 +1,6 @@
-function [Decision] = Remove_Bad_Signals(PPG,ABP,sig_length)
-    A = normalize(PPG,'range');
-    B = normalize(ABP,'range');
+function [Decision] = Remove_Bad_Signals(x,y,sig_length)
+    A = normalize(x,'range');
+    B = normalize(y,'range');
     
     % Transpose the Signals if they are in column format, necessary for peak detection
     sig_size_A = size(A);
@@ -42,7 +42,7 @@ function [Decision] = Remove_Bad_Signals(PPG,ABP,sig_length)
     std_peaks_ABP = std(pks_ABP,1);
     num_peaks_ABP = length(pks_ABP);
 
-    if ((std_peaks_ABP > 0.12) || (std_peak_dist_ABP > 12) || (std_peaks_PPG > 0.12) || (std_peak_dist_PPG > 12) || (num_peaks_PPG < 6) || (num_peaks_ABP < 6))
+    if ((std_peaks_ABP > 0.13) || (std_peak_dist_ABP > 13) || (std_peaks_PPG > 0.13) || (std_peak_dist_PPG > 13) || (num_peaks_PPG < 5) || (num_peaks_ABP < 5))
         Decision = 0;
     else
         Decision = 1;
