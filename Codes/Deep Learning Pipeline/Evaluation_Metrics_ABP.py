@@ -499,3 +499,38 @@ def bland_altman_plot_ABP(Ytrue, Ypred):
     plt.title('Bland-Altman Plot for SBP Prediction', fontsize=18)
     #
     plt.show()
+
+    
+def Evaluation_Metrics(GRND, Pred):
+    mae_construction_err = []
+    mse_construction_err = []
+    rmse_construction_err = []
+    cc = []
+    bad_indices = []
+    count = 0
+
+    for i in range(len(GRND)):
+
+        MAE = np.mean(np.abs(Pred[i].ravel() - GRND[i].ravel()))
+        MSE = mean_squared_error(Pred[i].ravel(), GRND[i].ravel(), squared=True)
+        RMSE = mean_squared_error(Pred[i].ravel(), GRND[i].ravel(), squared=False)
+
+        if ~(np.std(Pred[i].ravel())==0 or np.std(GRND[i].ravel())==0):
+          corr, _ = pearsonr(Pred[i].ravel(), GRND[i].ravel())
+        else:
+          continue
+
+        if MAE < 1:
+            mae_construction_err.append(MAE)
+            mse_construction_err.append(MSE)
+            rmse_construction_err.append(RMSE)
+            cc.append(corr)
+        elif MAE >= 1:
+            count = count + 1
+            bad_indices.append(i)
+
+    print(f'MAE Construction Error : {round(np.mean(mae_construction_err), 3)} +/- {round(np.std(mae_construction_err), 3)}')
+    print(f'MSE Construction Error : {round(np.mean(mse_construction_err), 3)} +/- {round(np.std(mse_construction_err), 3)}')
+    print(f'RMSE Construction Error : {round(np.mean(rmse_construction_err), 3)} +/- {round(np.std(rmse_construction_err), 3)}')
+    print(f'Pearson Correlation : {round(np.mean(cc)*100, 3)}% +/- {round(np.std(cc)*100, 3)}')
+    print(f'Number of Bad Predictions = {count}')
