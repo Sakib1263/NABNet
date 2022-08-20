@@ -1,12 +1,13 @@
 # Deep Learning Pipeline for ABP Estimation using NABNet
-This repository contains the end-to-end 1D Convolutional Neural Network (1D-CNN) based Segmentation Pipeline to estimate ABP from PPG, VPG, APG and ECG waveforms. The estimated BP values (SBP and DBP) from an UNet based autoencoder can be found from these links:  
+This repository contains the end-to-end 1D Convolutional Neural Network (1D-CNN) based Segmentation Pipeline to estimate ABP from PPG, VPG, APG and ECG waveforms. The estimated BP values (SBP and DBP) from the shallow UNet based autoencoder from [1] and trained segmentation model trained on the same dataset can be found from these links:  
 
-Fold 1 (Part 4):  
-Fold 2 (Part 3):  
-Fold 3 (Part 2):  
-Fold 4 (Part 1):  
+* Trained Segmentation Model Fold 1 (Test Set: Part 4):  
+* SBP Fold 1 (Test Set: Part 4):  
+* DBP Fold 1 (Test Set: Part 4):    
 
-These estimated BP values are for the 4 channel (PPG, VPG, APG, ECG) approach. Details of the approach in this paper [1]. Similar approach was followed to estimate BP values for this study. Mentionable that these BP values can be predicted by any other classical or deep learning approach, only the same set of signals need to be used for both BP prediction and ABP segmentation pipelines as discussed in this paper [2].
+These estimated BP values are for the 4 channel (PPG, VPG, APG, ECG) approach. Details of the approach in this paper [1]. Similar approach was followed to estimate BP values for this study.  
+
+Mentionable that these BP values can be predicted by any other classical or deep learning approach, only the same set of signals need to be used for both BP prediction and ABP segmentation pipelines as discussed in this paper [2]. Estimated BP values and the trained segmentation model can loaded directly into the pipeline, tested and evaluated on the respective test folds. This model takes in normalized PPG, VPG, APG and ECG as the inputs and normalized, segmented ABP as the output [2].  
 
 
 ## Reference:
