@@ -4,6 +4,12 @@ This repository contains the end-to-end 1D Convolutional Neural Network (1D-CNN)
 * Trained Segmentation Model Fold 1: https://drive.google.com/file/d/1hgD3APmcylf54RoGpjSGbPLMrRQA3Jkd/view?usp=sharing  
 * SBP Fold 1: https://drive.google.com/file/d/1-iaHpspm3XVVVosn6M6QDJWqlLyVjH7y/view?usp=sharing
 * DBP Fold 1: https://drive.google.com/file/d/1-eTFPKWgDysc8Ah8mers_pKvGX327C8c/view?usp=sharing
+* SBP Fold 2: https://drive.google.com/file/d/1Ei7PxaCEIIqhu_0A7Lc3JQnqJ84hw1JC/view?usp=sharing
+* DBP Fold 2: https://drive.google.com/file/d/1D7bjldaG1ZO0UlHI3-lo_mYXJVG6PW-X/view?usp=sharing
+* SBP Fold 3: https://drive.google.com/file/d/1-BiMWmbfKnVK3rN15tLHS5UxFlj5M3ax/view?usp=sharing
+* DBP Fold 3: https://drive.google.com/file/d/1-AnRNW09qL5Kh4zHb4PBgcodYc48ed94/view?usp=sharing
+* SBP Fold 4: https://drive.google.com/file/d/1-_Wz7W3Qrdu5iRWXjtULUeUmb2CL74xf/view?usp=sharing
+* DBP Fold 4: https://drive.google.com/file/d/1-ZObf25po8F_PxOpAZQIiTRZgple6iOR/view?usp=sharing
 
 These estimated BP values are for the 4 channel (PPG, VPG, APG, ECG) approach. Details of the approach in this paper [1]. Similar approach was followed to estimate BP values for this study.  
 
