@@ -1,2 +1,3 @@
 # About
-BP Prediction and ABP Signal Estimation from PPG, ECG, VPG (PPG') and APG (PPG'') using Deep Learning. This repository contains files related to the paper called "A Shallow U-Net Architecture for Reliably Predicting Blood Pressure (BP) from Photoplethysmogram (PPG) and Electrocardiogram (ECG) Signals"
+ABP Waveform Estimation from PPG, PPG derivatives and ECG using Deep Learning based 1D-Segmentation models. This repository contains files related to the paper called "NABNet: A Nested Attention-guided BiConvLSTM Network for a robust prediction of Blood Pressure components from reconstructed Arterial Blood Pressure waveforms using PPG and ECG Signals"  
+
