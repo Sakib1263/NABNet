@@ -11,8 +11,10 @@ The proposed NABNet has been built on the UNet++ segmentation model [2]. Instead
 **NABNet Architecture Breakdown**  
 ## Model Qualitative Performance  
 While quantitative performances can be explored from the article itself, here we share some visualizations from the paper showing the robust qualitative performance of our approach.  
-![NABNet Performance]([https://github.com/Sakib1263/NABNet/blob/main/Documents/NABNet.png](https://github.com/Sakib1263/NABNet/blob/main/Documents/1-s2.0-S1746809422007017-gr7.jpg) "NABNet Performance Figure 1")  
-**NABNet Performance in Estimating ABP from various PPG and ECG Morphology**
+![NABNet Performance Figure 1](https://github.com/Sakib1263/NABNet/blob/main/Documents/1-s2.0-S1746809422007017-gr7.png "NABNet Performance Figure 1")  
+**NABNet Performance in Estimating ABP from various PPG and ECG Morphology**  
+![NABNet Performance Figure 2](https://github.com/Sakib1263/NABNet/blob/main/Documents/1-s2.0-S1746809422007017-gr8_lrg.png "NABNet Performance Figure 2")  
+**NABNet Performance in Retaining Cardiovascular Anomalies (CVDs) from corresponding PPG and ECG signals**  
 ## Citation Request  
 If you use out preprocessed data, code or any other materials in your work, please cite the following articles:
 ```
