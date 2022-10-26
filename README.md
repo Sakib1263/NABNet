@@ -2,7 +2,7 @@
 ## Introduction
 ABP Waveform Estimation from PPG, PPG derivatives and ECG using Deep Learning based 1D-Segmentation models. This repository contains files related to the paper called "NABNet: A Nested Attention-guided BiConvLSTM Network for a robust prediction of Blood Pressure components from reconstructed Arterial Blood Pressure waveforms using PPG and ECG Signals"  
 ## ABP Estimation Pipeline  
-Our proposed ABP estimation pipeline divides the task into two parts viz. BP prediction and ABP pattern estimation. Combining outcomes from both sub-pipelines provides with the final estimation ABP waveforms. Mentionable that this paper covers only the ABP segmentation task and uses predicted BP values from this articles published in MDPI Sensors [1]. Nevertheless, any other robust BP prediction method can be used as well.  
+Our proposed ABP estimation pipeline divides the task into two parts viz. BP prediction and ABP pattern estimation. Combining outcomes from both sub-pipelines provides with the final estimated ABP waveforms. Mentionable that this paper covers only the ABP segmentation task and uses predicted BP values from this article published [1] in MDPI Sensors. Nevertheless, any other ML/DL based robust BP prediction method can be used instead.  
 ![ABP Estimation Pipeline](https://github.com/Sakib1263/NABNet/blob/main/Documents/Pipeline.png "ABP Estimation Pipeline")  
 **Proposed ABP Estimation End2End Pipeline Block Diagram**  
 ## NABNet Architecture  
